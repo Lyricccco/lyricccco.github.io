@@ -67,6 +67,50 @@
             <td style="padding:10px;width:40%;vertical-align:middle">
               <div class="one" style="width:100%">
                 <div class="two" id='objnerf_image' style="width:100%"><video  width=100% muted autoplay loop>
+                <source src="images/instantretouch_rep_fig.png" type="video/mp4">
+                Your browser does not support the video tag.
+                </video></div>
+                <img src='images/instantretouch_rep_fig.png' style="width:100%">
+              </div>
+              <script type="text/javascript">
+                function adapt_start() {
+                  document.getElementById('adapt_image').style.opacity = "1";
+                }
+
+                function adapt_stop() {
+                  document.getElementById('adapt_image').style.opacity = "0";
+                }
+                adapt_stop()
+              </script>
+            </td>
+                  <td style="padding:10px;width:60%;vertical-align:middle">
+                <a href="papers\DistilledBilateral___CVPR_2026__arxiv_.pdf">
+                  <papertitle>InstantRetouch: Efficient and High-Fidelity Instruction-Guided Image Retouching with Bilateral Space</papertitle>
+                </a>
+                <br>
+                <a href="https://gnwekge78707.github.io/">Jiarui Wu</a>,
+                Yujin Wang,
+                <strong>Ruikang Li</strong>,
+                <a href="https://tangeego.github.io/">Shiqi Chen</a>,
+                Fan Zhang,
+                <a href="https://www.gujinwei.org/">Jinwei Gu</a>,
+                <a href="https://tianfan.info/">Tianfan Xue</a>
+                <br>
+          <em>CVPR</em>, 2026
+                <br>
+                <!-- <a href="https://openimaginglab.github.io/DualDn/">project page</a> / -->
+                <a href="papers\DistilledBilateral___CVPR_2026__arxiv_.pdf">Paper</a>
+                <!-- <a href="https://mycuhk-my.sharepoint.com/personal/1155231343_link_cuhk_edu_hk/_layouts/15/onedrive.aspx?id=%2Fpersonal%2F1155231343%5Flink%5Fcuhk%5Fedu%5Fhk%2FDocuments%2FDualDn%2FPaper%2F07547%2Dsupp%2Epdf&parent=%2Fpersonal%2F1155231343%5Flink%5Fcuhk%5Fedu%5Fhk%2FDocuments%2FDualDn%2FPaper&ga=1">supplement</a> /
+                <a href="https://github.com/OpenImagingLab/DualDn">code</a> -->
+                <p></p>
+                <p>We propose to distilled multi-step diffusion model into a compact editing space (bilateral-grid) for efficient image retouching.</p>
+              </td>
+            </tr>
+
+          <tr onmouseout="adapt_stop()" onmouseover="adapt_start()">
+            <td style="padding:10px;width:40%;vertical-align:middle">
+              <div class="one" style="width:100%">
+                <div class="two" id='objnerf_image' style="width:100%"><video  width=100% muted autoplay loop>
                 <source src="images/dualdn_rep_fig.png" type="video/mp4">
                 Your browser does not support the video tag.
                 </video></div>
