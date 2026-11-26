@@ -9,7 +9,8 @@ Source code for my personal academic homepage:
 The website is fully static and requires no build step.
 
 ```bash
-python3 -m http.server 8000
+python3 serve.py
 ```
 
 Then open <http://localhost:8000>.
+The preview reloads HTML, CSS and JavaScript after edits and caches versioned images.

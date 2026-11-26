@@ -15,8 +15,9 @@
   <meta property="og:image:alt" content="Portrait of Ruikang Li">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="stylesheet.css">
-  <script defer src="script.js"></script>
+  <link rel="preload" as="image" href="images/work/tailsteer-dance-atlas.webp?v=5c12432f9293" fetchpriority="high">
+  <link rel="stylesheet" href="stylesheet.css?v=2cca948290f7">
+  <script defer src="script.js?v=c8ae2162c599"></script>
   <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon.png">
   <link rel="apple-touch-icon" sizes="192x192" href="/images/favicon.png">
   <script type="application/ld+json">
@@ -48,13 +49,13 @@
   <div class="spectrum-line" aria-hidden="true"></div><a class="skip-link" href="#content">Skip to content</a>
   <nav class="site-nav" aria-label="Primary navigation"><div class="shell nav-inner">
     <a class="monogram" href="#top" aria-label="Ruikang Li home">RL</a>
-    <div class="nav-links"><a href="#research">Research</a><a href="#work">Paper</a><a href="#education">Education</a></div>
+    <div class="nav-links"><a href="#research">Research</a><a href="#work">Paper</a><a href="#internship">Internship</a><a href="#education">Education</a></div>
   </div></nav>
 
   <header class="hero shell" id="top">
     <div class="hero-copy">
       <h1>Ruikang Li</h1>
-      <p class="hero-intro">2-nd year PhD student at <a href="https://mmlab.ie.cuhk.edu.hk/">MMLab</a>, CUHK, advised by Prof. <a href="https://tianfan.info/">Tianfan Xue</a>.</p>
+      <p class="hero-intro">3-rd year PhD student at <a href="https://mmlab.ie.cuhk.edu.hk/">MMLab</a>, CUHK, advised by Prof. <a href="https://tianfan.info/">Tianfan Xue</a>.</p>
       <p class="hero-detail">Before starting my PhD, I earned an MSc in Applied Optics from <a href="http://opt.zju.edu.cn/opten/">Zhejiang University</a>, where I worked with Dr. <a href="https://tangeego.github.io/">Shiqi Chen</a>, and a BSc with distinction in Opto-Electronics from <a href="https://jyxy.tju.edu.cn/en/">Tianjin University</a>.</p>
       <p class="contact-text"><span>Email</span> lyricccco44 at gmail.com</p>
       <div class="profile-links"><a href="https://scholar.google.com/citations?user=QsSdunoAAAAJ&amp;hl=en">Google Scholar <span>↗</span></a><a href="https://github.com/Lyricccco">GitHub <span>↗</span></a></div>
@@ -74,13 +75,64 @@
       <div class="section-label work-heading"><h2>Selected Papers</h2></div>
       <p class="legend work-legend">* Equal contribution &nbsp;·&nbsp; † Corresponding author</p>
       <div class="work-list">
+        <article class="work-item tailsteer" id="tailsteer">
+          <div class="trajectory-backdrop" aria-hidden="true">
+            <svg class="trajectory-background" viewBox="-45 100 1200 440" preserveAspectRatio="xMaxYMax meet" aria-hidden="true" focusable="false">
+              <defs>
+                <linearGradient id="trajectory-ink">
+                  <stop stop-color="#8faade"/><stop offset="1" stop-color="#305c9f"/>
+                </linearGradient>
+                <linearGradient id="trajectory-entry" gradientUnits="userSpaceOnUse" x1="-20" x2="155">
+                  <stop stop-color="white" stop-opacity="0"/><stop offset="1" stop-color="white"/>
+                </linearGradient>
+                <mask id="trajectory-fade" maskUnits="userSpaceOnUse" x="-30" y="90" width="1200" height="560">
+                  <rect x="-30" y="90" width="1200" height="560" fill="url(#trajectory-entry)"/>
+                </mask>
+              </defs>
+              <g class="trajectory-guides" fill="none" mask="url(#trajectory-fade)">
+                <path d="M-20 423 C210 522 420 469 670 409 C840 330.76 985 451 1150 510"/>
+                <path d="M-20 436 C210 532 420 478 670 416 C840 345.76 985 467 1150 525"/>
+                <path d="M-20 449 C210 542 420 487 670 423 C840 360.76 985 483 1150 540"/>
+                <path d="M-20 462 C210 552 420 496 670 430 C840 375.76 985 499 1150 555"/>
+                <path d="M-20 488 C210 572 420 514 670 444 C840 405.76 985 531 1150 585"/>
+                <path d="M-20 501 C210 582 420 523 670 451 C840 420.76 985 547 1150 600"/>
+                <path d="M-20 514 C210 592 420 532 670 458 C840 435.76 985 563 1150 615"/>
+                <path d="M-20 527 C210 602 420 541 670 465 C840 450.76 985 579 1150 630"/>
+              </g>
+              <path class="trajectory-base" mask="url(#trajectory-fade)" transform="translate(0 -4)" d="M-20 475 C210 562 420 505 670 437 C826 395 964 263 1150 160"/>
+              <path id="tailsteer-tail" class="trajectory-tail" mask="url(#trajectory-fade)" d="M-20 475 C210 562 420 505 670 437 C840 390.76 985 515 1150 570"/>
+              <path class="trajectory-onset" transform="translate(670 437)" d="M0 -14 11 7 -11 7Z" fill="#ce7133" stroke="#f7d0b3" stroke-width="4"/>
+              <circle class="trajectory-particle" r="6" fill="#315b9c">
+                <animateMotion dur="9s" repeatCount="indefinite" calcMode="paced"><mpath href="#tailsteer-tail"/></animateMotion>
+                <animate attributeName="opacity" dur="9s" repeatCount="indefinite" values="0;1;1;0" keyTimes="0;0.083333;0.916667;1" calcMode="spline" keySplines=".333 0 .667 1;0 0 1 1;.333 0 .667 1"/>
+              </circle>
+            </svg>
+          </div>
+          <figure class="tailsteer-preview">
+            <div class="dance-sequence">
+              <img class="dance-poster" src="images/work/tailsteer-dance-poster.webp?v=98814af72563" width="642" height="480" alt="Reze performing the same dance, with the base model on the left and TailSteer on the right.">
+              <img class="dance-atlas" src="images/work/tailsteer-dance-atlas.webp?v=5c12432f9293" width="3210" height="1920" decoding="async" fetchpriority="high" alt="" aria-hidden="true" hidden>
+            </div>
+            <button class="dance-turn" type="button" disabled>TURN <span>10</span></button>
+            <figcaption class="dance-labels"><span>BASE MODEL</span><span>AFTER TailSteer</span></figcaption>
+          </figure>
+          <div class="work-copy">
+            <div class="work-meta"><span class="venue">arxiv</span><span class="featured-mark">New</span></div>
+            <h3><a href="https://lyricccco.github.io/tailsteer/">TailSteer: Trajectory-Tail Steering for Drift-Resistant Multi-turn Image Editing</a></h3>
+            <p class="authors"><strong>Ruikang Li</strong>, <a href="https://cecret3350.github.io/">Zixuan Chen</a>, <a href="https://gnwekge78707.github.io/">Jiarui Wu</a>, <a href="https://mdyao.github.io/">Mingde Yao</a>, <a href="https://invictus717.github.io/">Yiyuan Zhang</a>, <a href="https://openreview.net/profile?id=~Yujin_Wang2">Yujin Wang</a>, <a href="https://scholar.google.com/citations?user=NSeqMYIAAAAJ&amp;hl=zh-CN">Hanming Deng</a>, <a href="https://scholar.google.com/citations?user=zdgKJXIAAAAJ&amp;hl=zh-CN">Lewei Lu</a>, <a href="https://tianfan.info/">Tianfan Xue</a>†</p>
+            <p class="work-slogan">Retain the base model’s <strong>original generative and editing capabilities</strong>.<br>
+              Unlock long-horizon preservation that <strong>rivals or even surpasses GPT-image-2.5-Sunburst</strong>.</p>
+            <div class="work-links"><a href="https://lyricccco.github.io/tailsteer/">Project page</a><a href="https://arxiv.org/abs/2611.06741">Paper</a><a href="https://github.com/Lyricccco/tailsteer">Code</a><a href="https://huggingface.co/collections/Lyricccco/tailsteer">Models</a><a href="https://huggingface.co/datasets/Lyricccco/Add-and-Preserve">Benchmark</a></div>
+          </div>
+        </article>
+
         <article class="work-item featured">
           <a class="work-visual animated-visual comparison-viewer" href="https://lyricccco.github.io/color-pass-through/" aria-label="Color Pass-Through before and after comparison">
             <img class="comparison-base" src="images/work/color-before.webp" alt="Default smartphone color reproduction">
             <span class="comparison-after"><img src="images/work/color-after.webp" alt="Color Pass-Through result"><span class="comparison-label label-after">After</span></span>
             <span class="comparison-label label-before">Before</span><span class="comparison-divider" aria-hidden="true"></span>
           </a>
-          <div class="work-copy"><div class="work-meta"><span class="venue">ECCV 2026</span><span class="featured-mark">New</span></div>
+          <div class="work-copy"><div class="work-meta"><span class="venue">ECCV 2026</span></div>
             <h3><a href="https://lyricccco.github.io/color-pass-through/">Color Pass-Through via Camera-Display Coupling</a></h3>
             <p class="authors"><strong>Ruikang Li</strong>, Molin Li, <a href="https://gnwekge78707.github.io/">Jiarui Wu</a>, Zhe Wei, Pengpeng Liu, <a href="https://tianfan.info/">Tianfan Xue</a>†</p>
             <p class="work-slogan">Make a smartphone transparent <strong>like Apple Vision Pro.</strong></p>
@@ -152,6 +204,31 @@
           </div>
         </article>
       </div>
+    </section>
+
+    <section class="section shell" id="internship">
+      <div class="section-label"><h2>Internship</h2></div>
+      <article class="internship-card">
+        <img class="internship-logo" src="images/sensenova.png" alt="SenseNova logo" width="54" height="54" loading="lazy">
+        <div class="internship-copy">
+          <div class="internship-header">
+            <h3><a href="https://sensenova.ai/">SenseNova U Series<svg class="internship-link-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 13 13 3M5 3h8v8"/></svg></a></h3>
+            <p class="internship-date"><time datetime="2026-08">August 2026</time> – Now</p>
+          </div>
+          <p class="internship-role"><a href="https://hr.sensetime.com/top-talent/">Top-Talent Research Intern</a></p>
+          <p class="internship-advisor">Advisor: <a href="https://scholar.google.com/citations?user=zdgKJXIAAAAJ&amp;hl=zh-CN">Lewei Lu</a></p>
+          <dl class="internship-details">
+            <div>
+              <dt>Research topics</dt>
+              <dd>Long-horizon generation · Multimodal training</dd>
+            </div>
+            <div>
+              <dt>Involved foundation models</dt>
+              <dd><a href="https://huggingface.co/sensenova/SenseNova-U1.5-8B-MoT">SenseNova U1.5 <span aria-hidden="true">↗</span></a></dd>
+            </div>
+          </dl>
+        </div>
+      </article>
     </section>
 
     <section class="section shell" id="education">
