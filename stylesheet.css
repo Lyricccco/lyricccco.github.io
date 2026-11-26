@@ -92,8 +92,8 @@
   padding: 16px 18px;
   border: 1px solid transparent;
   border-radius: 18px;
-  background: radial-gradient(ellipse at 80% 88%, #e9f0fb, transparent 60%),
-    linear-gradient(110deg, #fff 12%, #f8fafd 68%, #f5f8fc);
+  background: radial-gradient(ellipse at 80% 88%, #f4f7fc, transparent 60%),
+    linear-gradient(110deg, #fff 12%, #fbfcfe 68%, #fafbfd);
 }
 .work-item:is(.tailsteer, .featured)::before {
   content: "";
